@@ -14,7 +14,7 @@ This is my CSE 400 project where I make a following robot that "speak" Dante's w
 - 9V battery
 ## 4.Hardware Setup
 The Raspberry Pi is the heart and soul of the project. 
-- The pi has USB connections by the webcam, arduino uno, and the speaker.
+- The pi has USB connections by the webcam, and the speaker.
 - The portable battery is connected only to the raspberry pi.
 - The motors require more power that the raspberry pi cannot provide so the power module has the 9V battery connected through the battery clip connector on a breadboard. The motor drivers GND and 12V power side are then connected to the 5V and GND of the power module.
 - The motors are connected to the motor drivers, two motors per motor driver.
