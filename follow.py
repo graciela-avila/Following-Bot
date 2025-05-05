@@ -7,7 +7,6 @@ import RPi.GPIO as GPIO
 import random
 
 # GPIO Setup
-
 mode=GPIO.getmode()
 
 GPIO.cleanup()
@@ -26,7 +25,6 @@ GPIO.setup(Forward2, GPIO.OUT)
 
 
 # Text-to-Speech (async)
-
 def speak_async(text):
     def _speak():
         os.system('espeak "' + text + '" --stdout | aplay 2> /dev/null')
@@ -52,7 +50,6 @@ def detect_yellow_objects(frame):
     return None
 
 # Motor Logic
-
 def move_forward():
     GPIO.output(Forward3, GPIO.HIGH)
     GPIO.output(Forward4, GPIO.HIGH)
@@ -84,7 +81,6 @@ def turn_left():
     time.sleep(0.5)
 
 # Object-Following Logic
-
 last_spoken_time = 0
 speak_delay = 8  # seconds
 
@@ -117,15 +113,11 @@ def follow_yellow_object(object_center, frame_width):
                 spoken = random.choice(phrases)
                 speak_async(spoken)
                 last_spoken_time = current_time
-
-
-        
     else:
         stop_motors()
 
 
 # Camera Setup
-
 cap = cv2.VideoCapture(0)
 cap.set(cv2.CAP_PROP_FRAME_WIDTH, 320)
 cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 240)
@@ -141,9 +133,7 @@ try:
 
         object_center = detect_yellow_objects(frame)
         follow_yellow_object(object_center, frame.shape[1])
-
         cv2.imshow('Yellow Object Detection', frame)
-
         if cv2.waitKey(1) & 0xFF == 27:
             break
 
