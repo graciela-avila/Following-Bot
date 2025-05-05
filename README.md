@@ -21,6 +21,7 @@ The Raspberry Pi is the heart and soul of the project.
 - The GND of the motor driver and of the raspberry pi have to be connected so the motor driver has one wire which is connected to the power module GND and then another wire from the motor driver GND to the raspberry pi GND.
 - Then the motors are connected to the raspberry pi. The connections I made were purely from the IN1m and IN4 pins without the need for controlling the speed of the motors. Each motor had two pins for forward and backwards control but only forwards was used. 
 ## 4. Software Used
+- All code found in follow.py
 - OpenCV Color Detection through raspberry pi 4
 - Motor control through raspberry pi 4
 - Espeak through USB speaker on raspberry pi 4
