@@ -31,5 +31,6 @@ The Raspberry Pi is the heart and soul of the project.
 - Downloaded Espeak, opencv, and other dependencies for code to run.
 # 6. Further Notes
 - The power module allows for four motors to be powered effectively with little to no major changes to the code. The reason why the backwards function was not implemented into the project had to do with the fact that it required too much power and I had a deadline to meet. This project could be improved with an added power module to seperate the motors and be able to implement backwards pins.
-- I learned that weight was only an issue when the 9V battery had been used for some time and could not power all of them with the power to move but only run when lifted. 
+- I learned that weight was only an issue when the 9V battery had been used for some time and could not power all of them with the power to move but only run when lifted.
+- The Arduino Uno and Ultrasonic sensor were implemented in the design but were removed from the code due to the fact it would not have enough of a sync with reading and using the data from the arduino to the raspberry pi.
 
